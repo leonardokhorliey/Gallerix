@@ -2,6 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
+## Before running the application
+
+Open Terminal and navigate to the root directory of this app.
+
+Run `npm install -g @angular/cli` if it is not already available.
+
+Run `npm install @fortawesome/fontawesome-svg-core` , `npm install @fortawesome/free-solid-svg-icons` and `npm install @fortawesome/angular-fontawesome@` to install FontAwesome for rendering Solid Icons.
+
+Run `npm install -g json-server` to install mock JSON Server for our Fake JSON BackEnd.
+
+Run `json-server --watch db.json` to set the `db.json` file as the fake backend server.
+
+Since no backend server, create `assets` folder in `src` directory and save the images to be uploaded in the folder.
+
+Run `npm install lodash --save` to install lodash package if not already available.
+
+On uploading a picture, enter the path direct path to the picture e.g `image1.jpg` or `myimage.png` into the text input area.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

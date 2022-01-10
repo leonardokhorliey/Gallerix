@@ -1,0 +1,38 @@
+
+<div class = loginBox>
+    <h1 style="text-align: center;"> {{signUpView ? 'Sign Up' : 'Login'}} to Gallerix</h1>
+    <form >
+        <div class="form-content">
+            <label for="userName">Username</label>
+            <input class="form-content" name= "userName" [(ngModel)]= "userName" id = "userName" type="text"  class="form-control">  
+        </div>
+
+        <div *ngIf = signUpView class="form-content">
+            <label for="email">Email Address</label>
+            <input class="form-content" name= "email" [(ngModel)]= "email" id = "emailAddress" type="text"  class="form-control">
+        </div>
+
+        <div class="form-content">
+            <label for="password">Password</label>
+            <input class="form-content" name= "pass" [(ngModel)]= "pass" id = "passWordInput" type="password"  class="form-control">
+        </div>
+
+        <div *ngIf = signUpView class="form-content">
+            <label for="passwordConfirm">Confirm Password</label>
+            <input class="form-content" name= "passConfirm" [(ngModel)]= "passConfirm" id = "passWordConfirm" type="password"  class="form-control">
+        </div>
+        <button class="btn btn-primary" (click) = onBtnClick()>Submit</button>
+    </form>
+
+    <div style= "margin: auto; align-items: center; max-width: 300px; text-align: center;">
+        <p style="padding-top: 15px;">{{signUpTextInfo}} </p>
+        <button (click) = onSignUpBtnClick()>
+            <a >{{signUpBtnText}}</a>
+        </button>
+        
+    </div>
+    
+</div>
+
+
+

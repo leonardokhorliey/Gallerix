@@ -1,0 +1,26 @@
+
+
+<div class = "picturefield">
+
+    <div style= "align-items: center; width: 100%; justify-content: space-between; display: inline-flex;">
+        <h3>{{day}}</h3>
+
+        <fa-icon *ngIf = "!showImages" [icon]="faAngleDoubleDown" [ngStyle]="{'color':'blue'}"
+             (click)="hideImages()"></fa-icon>
+
+        <fa-icon *ngIf = "showImages" [icon]="faAngleDoubleUp" [ngStyle]="{'color':'blue'}"
+             (click)="hideImages()"></fa-icon>
+    </div>
+    
+
+    
+    <div *ngIf = showImages class="row"> 
+        <div *ngFor = "let k of pictureOutlineArray" class="column">
+          
+          <img *ngFor= "let j of k" src="assets/{{j}}" style="width:100%">
+          
+          
+        </div>
+        
+      </div>
+</div>

@@ -1,0 +1,27 @@
+<div class = loginBox>
+    <h1 style="text-align: center;"> {{currentUserName}}, add a picture to Gallerix</h1>
+    <form >
+        <div class="form-content">
+            <label for="name">Name of Picture</label>
+            <input class="form-content" name="picName" [(ngModel)] = "picName" id = "pictureName" type="text"  class="form-control">  
+        </div>
+
+        <div class="form-content">
+            <label for="url">Picture URL</label>
+            <input class="form-content" name="picUrl" [(ngModel)] = "picUrl" id = "pictureUrl" type="text"  class="form-control">
+        </div>
+
+        <div class="form-content">
+            <label for="format">Format</label>
+            <select class="form-content" id="pictureFormat" name="picFormat" [(ngModel)]= "picFormat" style="font-size: 10px; min-width: 210px; height: 30px;">
+                <option value= "png">PNG</option>
+                <option value= "jpg">JPG</option>
+              </select>
+            
+        </div>
+
+        <button class="btn btn-primary" (click) = onSubmit()>Submit</button>
+    </form>
+
+    
+</div>

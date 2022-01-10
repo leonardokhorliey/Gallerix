@@ -1,0 +1,75 @@
+<div class = "sidebar"
+[class.sidebar-active] = "showSideBar"
+[class.sidebar-inactive] = "!showSideBar">
+
+   
+
+    <div *ngIf = showSideBar>
+        <div style=" width: 100%; padding: 10px;">
+            <fa-icon style="float: right;" [icon]="faAngleDoubleLeft" [ngStyle]="{'color':'grey'}"
+                 (click)="toggleSideBar()"></fa-icon>
+        </div>
+
+        <p style="margin: 10px"> Hello</p>
+
+        <p style="margin: 10px; font-size: 200%;">
+            {{userName}}
+        </p>
+    
+        <button (click) = "uploadFile()">
+            Upload File
+        </button>
+    
+        <button>
+            Create Album
+        </button>
+    
+        <button (click) = "viewStats()">
+            View Statistics
+        </button>
+
+        <p style="margin-top: 400px; text-align: center;">Filter Images by Date</p>
+        
+        <form style= "margin: auto; width: 80%">
+            <div class="form-content">
+                <label for="startDate">Start Date</label>
+                <input class="form-content" name="filterStartDate" [(ngModel)] = "filterStartDate" id = "filterStartDate" type="date"  class="form-control">  
+            </div>
+
+            <div class="form-content">
+                <label for="endDate">End Date</label>
+                <input class="form-content" name="filterEndDate" [(ngModel)] = "filterEndDate" id = "filterEndDate" type="date"  class="form-control">  
+            </div>
+            <button class="btn btn-primary" style= "text-align: center;" (click) = filterImages()>Add Filter</button>
+        </form> 
+
+    </div>
+
+    <div *ngIf = !showSideBar >
+        <div style=" width: 100%; padding: 10px; margin-bottom: 80px;">
+            <fa-icon style="float: left; size: var(20);" [icon]="faBars" [ngStyle]="{'color':'grey'}"
+                 (click)="toggleSideBar()"></fa-icon>
+        </div>
+    
+        <div class = "sidebar-in">
+            <fa-icon [icon]="faUpload" [ngStyle]="{'color':'blue'}" style="margin: auto;"
+             ></fa-icon>
+        </div>
+    
+        <div class = "sidebar-in">
+            <fa-icon [icon]="faPlayCircle" [ngStyle]="{'color':'blue'}"
+             ></fa-icon>
+        </div>
+    
+        <div class = "sidebar-in">
+            <fa-icon [icon]="faChartBar" [ngStyle]="{'color':'blue'}"
+             ></fa-icon>
+        </div>
+    </div>
+    
+
+    
+
+</div>
+
+

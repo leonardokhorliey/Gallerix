@@ -1,0 +1,25 @@
+<div class= "statistics">
+    <div class= statistics-button-wrap-wrap>
+        <div class= statistics-button-wrap>
+            <button *ngFor = "let stat of stats" class= statistics-button
+            (click) = clickStat(stat)>
+                <p style= "font-size: 400%;">{{statsValues[stats.indexOf(stat)]}} </p>
+                {{stat}}
+            </button>
+    
+            
+        </div>
+    </div>
+
+    <div class= statistics-button-wrap-wrap>
+        <div class= statistics-button-wrap>
+            <button *ngFor = "let stat of statsBelow" class= statistics-button
+            (click) = clickStat(stat)>
+                <p style= "font-size: 400%;">{{statsValues[statsBelow.indexOf(stat) + 3]}} </p>
+                {{stat}}
+            </button>
+    
+        </div>
+    </div>
+    
+</div>>
