@@ -145,7 +145,7 @@ export class AppComponent implements OnInit {
     this.datesRendered = this.datesAvailable.filter((t) => {
       let p = t.split(" ")
       let k = new Date(Number(p[2]), month.indexOf(p[1]), Number(p[0])).getTime()
-      return k >= new Date(this.filterStartDate).getTime() && k<= new Date(this.filterEndDate).getTime()
+      return k >= new Date(this.filterStartDate).getTime() && k< new Date(this.filterEndDate).getTime()
     })
   }
 
